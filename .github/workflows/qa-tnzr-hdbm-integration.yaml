@@ -3,6 +3,7 @@ on:
     branches:
       - 'main'
       - 'hackfest/2022'
+      - 'tnzr-hdbm'
   workflow_call:
     inputs:
       board:
@@ -72,7 +73,7 @@ jobs:
       - name: Execute integration tests on target
         working-directory: workspace
         run: |
-          # Use twisterv2
+          # Use twister v2
           python3 -m venv .venv
           . .venv/bin/activate
           export ZEPHYR_BASE="$(pwd)/zephyr"
